@@ -1,0 +1,38 @@
+create html:
+    home.html (static version)
+    movies.html (static version)
+    reviews.html (static version)
+    singlereview.html ?
+    singlemovie.html?
+    signup.html (form version)
+    write_review.html (form version)
+    profie.html
+    
+
+create forms.py
+    class newuserform
+    class newreviewform
+    class newcommentform
+    class ratingform?
+    class editprofileform?
+    class likeform?
+
+
+edit views.py
+    def home()
+    def movies page view?
+    def singlemovie view?
+        include ratingform, submit will return to singlemovie and refresh the rates 
+        include likeform, submit will add record to watchlist
+
+    def reviews() return a review page to display all reviews
+        include a button to writereview which link to writereview.html
+    def writereview for newreviewform, link to write_review.html(user.html), back to reviews.html(olduser.html)
+
+    def singlereview() view?
+        create an if statement for writting comment on the single review,
+        which will use newcommentform, link to singlereview.html
+
+    def signup view for newuserform, link to signup.html, back to home.html
+
+    def profie view for editprofileform, and dispaly watchlist
